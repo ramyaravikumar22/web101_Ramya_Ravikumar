@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Who's That Pokémon?</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game">
+    <a class="back" href="../../index.html#games">&larr; Back to portfolio</a>
+    <h1>Who's That Pokémon?</h1>
+
+    <div class="scoreboard">
+      <span>Score: <strong id="score">0</strong></span>
+      <span>Streak: <strong id="streak">0</strong></span>
+      <span>Best: <strong id="best">0</strong></span>
+    </div>
+
+    <div class="stage">
+      <p id="loading">Loading...</p>
+      <img id="pokemon-img" alt="Silhouette of a mystery Pokémon" hidden>
+    </div>
+
+    <p id="message" aria-live="polite">Guess the Pokémon from its shadow!</p>
+
+    <form id="guess-form" autocomplete="off">
+      <input id="guess-input" type="text" placeholder="Type a name..." aria-label="Your guess" required>
+      <button type="submit" id="guess-btn">Guess</button>
+    </form>
+
+    <div class="actions">
+      <button id="hint-btn" type="button" class="secondary">Hint</button>
+      <button id="skip-btn" type="button" class="secondary">Skip</button>
+      <button id="next-btn" type="button" hidden>Next Pokémon &rarr;</button>
+    </div>
+
+    <p class="credit">Data from <a href="https://pokeapi.co/">PokéAPI</a></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

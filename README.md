@@ -10,12 +10,14 @@ Integration Specialist with 4+ years of experience delivering SaaS and API integ
 ## What's on the site
 - **About**: short bio and skills
 - **Projects**: integration and documentation work, plus this site
-- **Games**: browser games powered by public APIs (in progress)
+- **Games**: browser games powered by public APIs. Play *Who's That Pokémon?* at `/games/pokemon/`
 - **Resume**: experience, education and certifications
 - **Contact**: GitHub and email
 
 ## Built with
 - HTML5
+- JavaScript (`fetch`, async/await, DOM events)
+- [PokéAPI](https://pokeapi.co/)
 - CSS3 (flexbox, grid, responsive layout)
 - Hosted on GitHub Pages
 
@@ -24,6 +26,7 @@ Integration Specialist with 4+ years of experience delivering SaaS and API integ
 index.html          # the whole site (one page)
 css/style.css       # styling
 images/profile.jpg  # profile photo
+games/pokemon/      # Who's That Pokémon? game (HTML, CSS, JS)
 ```
 
 ## Run it locally
@@ -37,7 +40,7 @@ images/profile.jpg  # profile photo
 ## Roadmap
 - [ ] Add LinkedIn and project links
 - [ ] Add a downloadable resume PDF
-- [ ] Build the first API game (trivia or Pokémon guessing game with JavaScript `fetch`)
+- [x] Build the first API game: **Who's That Pokémon?** (JavaScript `fetch` + PokéAPI)
 - [ ] Add more games and a game-score section
 
 ## Contact

@@ -1,0 +1,61 @@
+:root {
+  --blue: #1940a9;
+  --yellow: #ffcb05;
+  --bg: #f6f8fc;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: #1b1f2a;
+  text-align: center;
+}
+
+.game { max-width: 480px; margin: 0 auto; padding: 20px; }
+.back { display: block; text-align: left; color: var(--blue); }
+h1 { color: var(--blue); }
+
+.scoreboard { display: flex; justify-content: space-around; margin-bottom: 12px; }
+
+.stage {
+  background: #fff;
+  border: 3px solid var(--blue);
+  border-radius: 16px;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#pokemon-img { width: 280px; height: 280px; object-fit: contain; }
+
+/* The silhouette: brightness(0) turns every pixel black. */
+#pokemon-img.hidden-pokemon { filter: brightness(0); }
+/* On reveal we remove that class; the transition fades the colour in. */
+#pokemon-img { transition: filter 0.6s ease; }
+
+#message { min-height: 1.6em; font-weight: bold; }
+#message.correct { color: #1a7f37; }
+#message.wrong { color: #c0392b; }
+
+#guess-form { display: flex; gap: 8px; }
+#guess-input { flex: 1; padding: 10px; font-size: 1rem; border: 2px solid #bbb; border-radius: 8px; }
+
+button {
+  padding: 10px 18px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--blue);
+  color: #fff;
+  cursor: pointer;
+}
+button:disabled { opacity: .5; cursor: not-allowed; }
+button.secondary { background: #e4ebfb; color: var(--blue); }
+.actions { margin-top: 12px; display: flex; gap: 8px; justify-content: center; }
+#next-btn { background: var(--yellow); color: #1b1f2a; font-weight: bold; }
+
+.credit { font-size: .8rem; margin-top: 24px; }
+[hidden] { display: none !important; }
